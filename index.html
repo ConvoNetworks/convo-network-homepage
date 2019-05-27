@@ -5,6 +5,10 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<script
+		  src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+		  integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
+		  crossorigin="anonymous"></script>
 	</head>
 	<body class="is-preload">
 
@@ -15,10 +19,9 @@
 			</header>
 
 		<!-- Signup Form -->
-			<form id="signup-form" method="post" action="#">
+		<script>function subscribe(){$.post("https://api.convo.network/?action=subscribe",{'email':$("#email").val()},function(e){alert('Subscribed.');}})}</script>
 				<input type="email" name="email" id="email" placeholder="Email Address" />
-				<input type="submit" value="Sign Up" />
-			</form>
+				<input type="submit" onclick="subscribe()" value="Sign Up" />
 
 		<!-- Footer -->
 			<footer id="footer">
